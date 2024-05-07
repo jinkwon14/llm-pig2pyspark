@@ -1,12 +1,7 @@
-FROM ollama/ollama
+FROM langchain/langchain
 
 # Install Java and utilities
-RUN apt-get update && \
-    apt-get install -y wget && \
-    apt-get install -y default-jdk
-
-# Install pip
-RUN apt-get install -y python3 python3-pip
+RUN apt-get update && apt-get install -y default-jdk
 
 # Install Apache Pig
 RUN wget http://apache.mirrors.pair.com/pig/pig-0.17.0/pig-0.17.0.tar.gz && \
